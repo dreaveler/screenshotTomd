@@ -3,6 +3,7 @@ import win32clipboard
 import io
 import time
 import base64
+import api
 class GetPhotoer:
     def __init__(self):
         self.data  = None
@@ -18,6 +19,11 @@ class GetPhotoer:
                 self.hash_num = hash(self.data)
         finally:
             win32clipboard.CloseClipboard()
+    def image_to_data_url(self):
+        buffered = io.BytesIO()
+        self.image.save(buffered, format="PNG")
+        base64_image = base64.b64encode(buffered.getvalue()).decode("utf-8")
+        return base64_image
     def wait_for_clipboard_image(self):
         last_checksum = self.hash_num
         current_checksum = None
@@ -27,4 +33,6 @@ class GetPhotoer:
             if last_checksum != current_checksum and current_checksum is not None:
                 self.get_clipboard_image()
                 last_checksum = current_checksum
+                content = api.ask_moonshot(self.image_to_data_url())
+                print(content)
             time.sleep(0.5)
