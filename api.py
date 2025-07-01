@@ -1,7 +1,7 @@
 from openai import OpenAI
  
 client = OpenAI(
-    api_key="sk-A2iJAxUg01pb6wts29RvA6hcqo5EUcaq4h8w2mAZ7pKYkSLr",
+    api_key="sk-XXXXXXXXX",
     base_url="https://api.moonshot.cn/v1",
 )
 def ask_moonshot(base64_image):
