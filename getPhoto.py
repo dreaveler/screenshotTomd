@@ -42,6 +42,7 @@ class GetPhotoer:
                 last_checksum = current_checksum
                 self.content = api.ask_moonshot(self.image_to_data_url())
                 self.content_to_clipboard()
+                print("done!")
                 input.input()
             time.sleep(0.5)
 
