@@ -10,6 +10,7 @@ pip install openai pillow pywin32 pywinauto
 python getPhoto.py
 ```
 即可开始文件
+你只需要负责截图软件是截到剪贴板里之后就不需要操作了，每次当你向剪贴板中放入新图片后，程序会自动运行。
 ## 调用API
 在api.py文件中，你可以设定api_key以及url，因为这个任务对于LLM来说并不困难，我这里图省事就调的kimi的api，本来以为不用花钱的，但还是需要花一些钱，好在kimi会送15的额度，可以暂时先用着。  
 文件中的提示词与输入我设定好了，想的话也可以自己改。  
