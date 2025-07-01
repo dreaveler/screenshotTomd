@@ -1,7 +1,12 @@
 # 必读说明
 这是一个我在上CV导论课时被不停的复制公式发给GPT/DS然后再等输出粘过去搞得不厌其烦的构想，它只需要能够读取剪贴板再发给一个多模态大模型再把大模型转化好的markdown格式传到剪贴板里粘过去就可以了。这其中有很多比我想得实现起来更加困难的地方，我也做了相应的妥协，后续有时间会不断优化改进，以及做出来一个GUI的。  
+## 开始
+必须有python，版本最好>=3.8  我的开发是用的3.13
+必须的库有 openai pillow  pywin32  pywinauto
+其余调用的库是内置库
 在文件夹中键入
 ```
+pip install openai pillow pywin32 pywinauto
 python getPhoto.py
 ```
 即可开始文件
