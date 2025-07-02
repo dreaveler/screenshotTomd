@@ -3,11 +3,11 @@
 **！你的截图软件必须把图片截到剪贴板里！！！！！**  
 ## 开始
 必须有python，版本最好>=3.8  我的开发是用的3.13  
-必须的库有 openai pillow  pywin32  pywinauto  
+必须的库有 openai pillow  pywin32  pywinauto keyboard  
 其余调用的库是内置库  
 在文件夹中键入
 ```
-pip install openai pillow pywin32 pywinauto
+pip install openai pillow pywin32 pywinauto keyboard
 python getPhoto.py
 ```
 即可开始文件
